@@ -3,64 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Developer - Terminal Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="terminal-container">
-        <div class="terminal-header">
-            <div class="terminal-controls">
-                <div class="control close"></div>
-                <div class="control minimize"></div>
-                <div class="control maximize"></div>
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">Light Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>A showcase of my projects and skills.</p>
             </div>
-            <div class="terminal-title">alex@portfolio:~$</div>
-        </div>
-        
-        <div class="terminal-body" id="terminal">
-            <div id="boot-screen" class="boot-screen">
-                <div class="boot-text">
-                    <div class="boot-line">Initializing portfolio system...</div>
-                    <div class="boot-line">Loading modules...</div>
-                    <div class="boot-line">Starting terminal interface...</div>
-                    <div class="boot-progress">
-                        <div class="progress-bar"></div>
-                    </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate developer with a love for creating elegant and functional web applications.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Project One</h3>
+                    <p>A brief description of the first project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>A brief description of the second project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Three</h3>
+                    <p>A brief description of the third project.</p>
                 </div>
             </div>
-            
-            <div id="terminal-content" class="terminal-content hidden">
-                <div class="welcome-banner">
-                    <pre class="ascii-art" id="ascii-banner"></pre>
-                    <div class="welcome-text">
-                        <div class="typing-text">Welcome to Alex Developer's Portfolio Terminal v2.1.0</div>
-                        <div class="typing-text">Type 'help' to see available commands</div>
-                        <div class="typing-text">Use tab for command completion, ↑↓ for history</div>
-                    </div>
-                </div>
-                
-                <div id="output" class="output"></div>
-                
-                <div class="input-line" id="input-line">
-                    <span class="prompt" id="prompt">alex@portfolio:~$ </span>
-                    <span id="input-display"></span>
-                    <span class="cursor" id="cursor">█</span>
-                </div>
-            </div>
-        </div>
-        
-        <input type="text" id="hidden-input" class="hidden-input" autocomplete="off" spellcheck="false">
-    </div>
-    
-    <div class="mobile-helper">
-        <div class="mobile-hint">Tap screen to type</div>
-    </div>
-    
-    <div class="scanlines"></div>
-    
-    <script src="app.js"></script>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
